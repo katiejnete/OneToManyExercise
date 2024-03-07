@@ -1,0 +1,33 @@
+{% extends 'list.html' %}
+
+{% block title %}New User{% endblock %} 
+
+{% block content %}
+<h1>Create User</h1>
+<form action="/users/new" method="post">
+  <div>
+    <label for="firstName">First Name:</label>
+    <input
+      type="text"
+      name="firstName"
+      id="firstName"
+      placeholder="Enter first name"
+      required
+    />
+  </div>
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input
+      type="text"
+      name="lastName"
+      id="lastName"
+      placeholder="Enter last name"
+    />
+  </div>
+  <div>
+    <label for="image">User Profile Picture URL:</label>
+    <input type="url" name="imageURL" id="imageURL" placeholder="Image URL" />
+  </div>
+  <button>Add</button>
+</form>
+{% endblock %}
